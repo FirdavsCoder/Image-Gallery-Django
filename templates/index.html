@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Responsive Image Gallery</h1>
+        <p>Without Media Queries</p>
+        <div class="grid">
+            {% for post in posts %}
+            <div class="grid-item">
+                <figure>
+                    <img src="{{ post.image.url }}" alt="">
+                    <figcaption>{{ post.title }}</figcaption>
+                </figure>
+            </div>
+            {% endfor %}
+            <!-- <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm1.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm2.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm3.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm4.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm5.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm6.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm7.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm8.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm9.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm1.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm11.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm12.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div>
+            <div class="grid-item">
+                <figure>
+                    <img src="./images/rasm13.jpg" alt="">
+                    <figcaption>Image Title</figcaption>
+                </figure>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
